@@ -5,13 +5,13 @@ class PostCreate(BaseModel):
     title: str
     content: str
     category: str
-    tags: list
+    tags: list[str]
 
 class PostUpdate(BaseModel):
     title: str
     content: str
     category: str
-    tags: list
+    tags: list[str]
 
 class PostResponse(BaseModel):
     id: int
