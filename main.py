@@ -51,7 +51,7 @@ def create_post(article: PostCreate, db: Session = Depends(get_db)):
 
     return data
 
-@app.put("/posts", response_model=PostResponse)
+@app.put("/posts/{id}", response_model=PostResponse)
 def update_post(id: int, article: PostUpdate, db: Session = Depends(get_db)):
     post = db.query(Post).filter(Post.id == id).first()
 
